@@ -1,8 +1,8 @@
 const express = require('express');
-const router = express.router();
+const router = express.Router();
 
-// Bring in models
-let Article = require('./models/article');
+// Bring in Article model
+let Article = require('../models/article');
 
 // Add Route
 router.get('/add', function (req, res) {
@@ -12,24 +12,6 @@ router.get('/add', function (req, res) {
 });
 
 // Add Articles Route
-
-// Get Single Article
-router.get('/:id', function (req, res) {
-
-    Article.findById(req.params.id, function (err, article) {
-        if (err) {
-            console.log(err);
-            return;
-        }
-        else {
-            res.render('article', {
-                article: article
-            })
-        }
-
-    });
-
-});
 
 // Load edit form
 router.get('/edit/:id', function (req, res) {
@@ -107,6 +89,24 @@ router.delete('/:id', function (req, res) {
         }
         res.send("Success");
     })
+});
+
+// Get Single Article
+router.get('/:id', function (req, res) {
+
+    Article.findById(req.params.id, function (err, article) {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        else {
+            res.render('article', {
+                article: article
+            })
+        }
+
+    });
+
 });
 
 module.exports = router;

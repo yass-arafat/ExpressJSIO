@@ -22,7 +22,7 @@ db.on('error', function (err) {
 // Init App
 const app = express();
 
-// Bring in Article model
+// Bring in models
 let Article = require('./models/article');
 
 // Load View Engine
@@ -127,8 +127,10 @@ app.get('/', function (req, res) {
 });
 
 // Route files
-let articles =require('./routes/articles');
+let articles = require('./routes/articles');
+let users = require('./routes/users');
 app.use('/articles', articles);
+app.use('/users', users);
 
 // Start Server
 app.listen(3000, function () {

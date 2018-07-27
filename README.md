@@ -38,3 +38,8 @@
 - the top benefits offered by MongoDB is the use of **dynamic schemas** that eliminates the need to pre-define the structure, like fields or value types. Like in a **user** collection, if there is an object like ob1{id: 1, name:'rahat'}, you can create another object like ob2{email: 'email_address'}. For more you can read this https://hackernoon.com/mongodb-vs-mysql-comparison-which-database-is-better-e714b699c38b 
  
  ONE THING IS When calling MongoDB schemaless, it really refers to the fact that the database itself requires no schema and no schema migrations either. That does not mean that your data is always unstructured - in most cases you want your data to be structured, and by nature, it usually is.
+ 
+ **Mongoose**
+- Mongoose is an ORM of MongoDB. It has brought to write code comfortably. It's just a model. Models are only useful when you are scaling into a big application with a large API that needs to be broken up into a MVC system(mongoose being your models). You can work without it also.
+- Mongoose  has some built in validation methods and neat features in order to make sure your schema is consistent when inserting/updating/finding documents from collections.
+

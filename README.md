@@ -1,13 +1,18 @@
 # ExpressJSIO
 ## Used Technology
-* Express JS
-* NodeJS and NPM
-* MongoDB Database
-* Mongoose ORM
-* Pug Template Engine
-* Bower Package Manager
+* Express JS                    
+* NodeJS and NPM                
+* MongoDB Database              
+* Mongoose ORM                  
+* Pug Template Engine           
+* Bower Package Manager         
 * Bootstrap
 * jQuery and Ajax
+* body-parser
+* express-validatior
+* express-session
+* connect-flash
+* bcryptjs
 ## Details
 **ExpressJS**
  1) What is Express.js?

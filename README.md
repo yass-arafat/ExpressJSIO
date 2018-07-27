@@ -35,6 +35,6 @@
 - MongoDB is a popular open-source Schemaless **document-oriented database** where MySQL is **Relational Database MS**
 - It follows NOSQL(no structured query language) procedures means unstructred way of documenting data.
 - documents are created and stored in BSON files, Binary JSON (JavaScript Object Notation) format, so all JS types of data are supported.
-- the top benefits offered by MongoDB is the use of dynamic schemas that eliminates the need to pre-define the structure, like fields or value types. For more you can read this https://hackernoon.com/mongodb-vs-mysql-comparison-which-database-is-better-e714b699c38b 
+- the top benefits offered by MongoDB is the use of **dynamic schemas** that eliminates the need to pre-define the structure, like fields or value types. Like in a **user** collection, if there is an object like ob1{id: 1, name:'rahat'}, you can create another object like ob2{email: 'email_address'}. For more you can read this https://hackernoon.com/mongodb-vs-mysql-comparison-which-database-is-better-e714b699c38b 
  
  ONE THING IS When calling MongoDB schemaless, it really refers to the fact that the database itself requires no schema and no schema migrations either. That does not mean that your data is always unstructured - in most cases you want your data to be structured, and by nature, it usually is.

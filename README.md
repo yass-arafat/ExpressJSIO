@@ -43,3 +43,9 @@
 - Mongoose is an ORM of MongoDB. It has brought to write code comfortably. It's just a model. Models are only useful when you are scaling into a big application with a large API that needs to be broken up into a MVC system(mongoose being your models). You can work without it also.
 - Mongoose  has some built in validation methods and neat features in order to make sure your schema is consistent when inserting/updating/finding documents from collections.
 
+**PUG*
+
+- PUG is a template engine like EJS which allows us to inject data and produces HTML
+- Benifits over EJS is it uses less lines and it looks more readable and you don't feel like you are writing html but javascript.
+- Disadvantage is here's white space matters. A simple mistake in formatting can cause a big trouble
+

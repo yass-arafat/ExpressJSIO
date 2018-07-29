@@ -54,3 +54,9 @@
 - Benifits over EJS is it uses less lines and it looks more readable and you don't feel like you are writing html but javascript.
 - Disadvantage is here's white space matters. A simple mistake in formatting can cause a big trouble
 
+**Bower**
+
+- Bower is a front end package manager. To manage(installing, maintaining etc) CSS frameworks like Bootstrap, libraries like jQuery, jQuery plugins, or JavaScript frameworks like Angular we need bower.
+- bower.json file contains all framework that you install in your project.
+- By .bowerrc file you can change the location of bower_components folder where you want it. bower_components folder contains all installed framework inside it.
+

@@ -73,3 +73,13 @@
 - To traverse HTML document, To handle event of html page and to interact with ajax you need jQuery.
 - The purpose of jQuery is to make it much easier to use JavaScript on website. jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that we can revoke with a single line of code.
 
+**AJAX**
+
+- Asynchronus JavaScript and XML
+- To send data between web pages through browser and server without reloading the page we need ajax calls.
+- when we start typing something in Google, JavaScript detects each 'button press' event and it makes AJAX calls after each such event to a back-end file which in-turn sends back the results.
+
+**bcryptJS**
+
+- 
+

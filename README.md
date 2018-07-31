@@ -60,3 +60,16 @@
 - bower.json file contains all framework that you install in your project.
 - By .bowerrc file you can change the location of bower_components folder where you want it. bower_components folder contains all installed framework inside it.
 
+**Bootstrap**
+
+- Bootstrap is an open-source JavaScript framework developed by the team at Twitter.
+- It is a combination of HTML, CSS, and JavaScript code.
+- To make responsive projects you need bootstrap. It caontains lot of built in library to make you websites interactive and responsive.
+- E.g. To use bootstrap you have to include such For CSS **bootstrap.min.css**, For Jquery **jquery-3.3.1.slim.min.js** For JS **bootstrap.min.js** in to your html page.
+
+**JQuery**
+
+- jQuery is a fast and concise library of JavaScript.
+- To traverse HTML document, To handle event of html page and to interact with ajax you need jQuery.
+- The purpose of jQuery is to make it much easier to use JavaScript on website. jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that we can revoke with a single line of code.
+

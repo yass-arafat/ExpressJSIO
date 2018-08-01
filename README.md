@@ -12,7 +12,7 @@
 * express-validatior
 * express-session
 * connect-flash
-* bcryptjs
+* bcryptJS
 ## Details
 **ExpressJS**
  1) What is Express.js?
@@ -79,7 +79,19 @@
 - To send data between web pages through browser and server without reloading the page we need ajax calls.
 - when we start typing something in Google, JavaScript detects each 'button press' event and it makes AJAX calls after each such event to a back-end file which in-turn sends back the results.
 
+
+**Salt**
+
+- To understand bcrypt we first need to know about salt encryption as bcrypt uses salt.
+- salt is some value that is concatanated to your password/hashed password to make difficult for attackers in brute force attacking.
+- value could be any dictionary value or if you want to make it more difficult you can use random salt value in your system for each user.
+- Two very nice article i found so far about salt
+https://gooroo.io/GoorooTHINK/Article/13023/The-difference-between-encryption-hashing-and-salting/2085#.W2E8e9Iza00
+and
+https://crypto.stackexchange.com/questions/1776/can-you-help-me-understand-what-a-cryptographic-salt-is 
+
 **bcryptJS**
 
-- 
-
+- bcrypt is an encryption system that automatically salts the data that encrypts.
+- It adds extra text or numbers as salt to any data put in and takes it out when the password is called. It can be made to go slower which helps against brute force attacks.
+- bryptJS is the model of using bcrypt encryption through JavaScript language.

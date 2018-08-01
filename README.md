@@ -95,3 +95,13 @@ https://crypto.stackexchange.com/questions/1776/can-you-help-me-understand-what-
 - bcrypt is an encryption system that automatically salts the data that encrypts.
 - It adds extra text or numbers as salt to any data put in and takes it out when the password is called. It can be made to go slower which helps against brute force attacks.
 - bryptJS is the model of using bcrypt encryption through JavaScript language.
+
+**body-parser**
+
+- body-parser extract the entire body portion of an incoming request stream and exposes it on  **req.body**
+- To handle HTTP POST request in Express.js version 4 and above, you need to install middleware module called body-parser.
+- This body-parser module parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request.
+
+**connect-flash**
+
+- connect flash is the middleware to show flash message in web pages. e.g. After sign up completed to show message like 'You are registerd' you need this middleware.

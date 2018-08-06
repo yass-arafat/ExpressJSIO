@@ -5,8 +5,10 @@ const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
+const config = require('./config/database');
+const passport = require('passport');
 
-mongoose.connect('mongodb://localhost/expressjssample');
+mongoose.connect(config.database);
 let db = mongoose.connection;
 
 // Check Connection
@@ -72,6 +74,12 @@ app.use(expressValidator({
     }
 }));
 
+// Passport Config
+require('./config/passport')(passport);
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Home Route
 //------------------------------//
 
@@ -111,6 +119,11 @@ app.get('/', function(req, res){
     });
 });
 */
+// Setting Global Variable
+app.get('*', function(req, res, next){
+    res.locals.user = req.user || null;
+    next();
+})
 
 // collecting articles from mongodb and showing it to page
 app.get('/', function (req, res) {

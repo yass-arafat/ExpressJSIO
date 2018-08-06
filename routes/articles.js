@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-// Bring in models
+// Article Model
 let Article = require('../models/article');
+
+// User Model
+let User = require('../models/user');
 
 // Add Route
 router.get('/add', function (req, res) {
@@ -27,20 +30,20 @@ router.get('/edit/:id', function (req, res) {
 router.post('/add', function (req, res) {
 
     req.checkBody('title', 'Title Is Required').notEmpty();
-    req.checkBody('author', 'Author Is Required').notEmpty();
+    // req.checkBody('author', 'Author Is Required').notEmpty();
     req.checkBody('body', 'Body Is Required').notEmpty();
 
     let errors = req.validationErrors();
 
     if (errors) {
         res.render('add_articles', {
-            title:"Add Article",
-            errors:errors
+            title: "Add Article",
+            errors: errors
         })
     } else {
         let article = new Article();
         article.title = req.body.title;
-        article.author = req.body.author;
+        article.author = req.user._id;
         article.body = req.body.body;
 
         article.save(function (err) {
@@ -61,7 +64,7 @@ router.post('/edit/:id', function (req, res) {
     let article = {};
 
     article.title = req.body.title;
-    article.author = req.body.author;
+    article.author = req.user._id;
     article.body = req.body.body;
 
     let query = { _id: req.params.id }
@@ -100,9 +103,13 @@ router.get('/:id', function (req, res) {
             return;
         }
         else {
-            res.render('article', {
-                article: article
-            })
+            User.findById(article.author, function (err, user) {
+
+                res.render('article', {
+                    article: article,
+                    author: user.name
+                });
+            });
         }
 
     });

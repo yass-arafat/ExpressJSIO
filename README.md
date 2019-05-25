@@ -24,8 +24,8 @@
     Ans. In ExpressJS we don't have to repeat same code over and over again. Node.js is a low-level I/O mechanism which has an HTTP module. If we just use an HTTP module, a lot of work like parsing the payload, cookies, storing sessions(in memory or in Redis), selecting the right route pattern based on regular expressions will have to be re-implemented. With Express.js we will get the built in library/methods to do this with simplicity.
     
     In Node: To create, listen server and make response
-```var http = require('http');
-
+```
+var http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.end('Hello World!');
@@ -33,6 +33,8 @@ http.createServer(function (req, res) {
 ```
     In Express:
 ```
+const express = require('express');
+const app = express();
 app.get('/', function(req, res){
 res.send('Hello world');
 })

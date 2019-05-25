@@ -23,6 +23,24 @@
  
     Ans. In ExpressJS we don't have to repeat same code over and over again. Node.js is a low-level I/O mechanism which has an HTTP module. If we just use an HTTP module, a lot of work like parsing the payload, cookies, storing sessions(in memory or in Redis), selecting the right route pattern based on regular expressions will have to be re-implemented. With Express.js we will get the built in library/methods to do this with simplicity.
     
+    In Node: To create, listen server and make response
+```var http = require('http');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end('Hello World!');
+}).listen(8080);
+```
+    In Express:
+```
+app.get('/', function(req, res){
+res.send('Hello world');
+})
+app.listen(3000, function () {
+    console.log('server started on port 3000');
+});
+
+```
  3) Does Express a MVC Framework
  
     Ans. Express.js is not an model-view-controller framework by itself. You need to bring your own object-relational mapping libraries such as Mongoose for MongoDB, Sequelize for SQL databases in your project.

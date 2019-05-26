@@ -124,6 +124,19 @@ https://crypto.stackexchange.com/questions/1776/can-you-help-me-understand-what-
 - To handle HTTP POST request in Express.js version 4 and above, you need to install middleware module called body-parser.
 - This body-parser module parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request.
 
+**express-validator**
+
+- express-validator is a set of express.js middlewares that wraps validator.js validator and sanitizer functions.
+example: https://express-validator.github.io/docs/ 
+- normally setting required field true in model won't show validation in page. we need this middlware for that.
+- it has features like: (read details in officila doc mentiond above) 
+    * Sanitization
+    * Custom validators/sanitizers
+    * Custom error messages
+    * Wildcards
+    * Schema validation
+
+
 **connect-flash**
 
 - connect flash is the middleware to show flash message in web pages. e.g. After sign up completed to show message like 'You are registerd' you need this middleware.

@@ -1,5 +1,5 @@
 const express = require('express');
-const path = require('path');
+const path = require('path');// we don't need to install path module separately as it's a core module
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');

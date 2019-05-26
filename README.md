@@ -43,6 +43,8 @@ app.listen(3000, function () {
 });
 
 ```
+More: https://stackoverflow.com/questions/5284340/what-is-node-js-connect-express-and-middleware
+
  3) Does Express a MVC Framework
  
     Ans. Express.js is not an model-view-controller framework by itself. You need to bring your own object-relational mapping libraries such as Mongoose for MongoDB, Sequelize for SQL databases in your project.

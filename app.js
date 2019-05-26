@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');// we don't need to install path module separately as it's a core module
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+const mongoose = require('mongoose');// it is an object relational mapping libraries of Mongodb
+const bodyParser = require('body-parser');//This body-parser module parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request in req.body.
 const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
@@ -44,7 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Express Messages Middleware
 app.use(require('connect-flash')());
 app.use(function (req, res, next) {
-    res.locals.messages = require('express-messages')(req, res);
+    res.locals.messages = require('express-messages')(req, res);// setting global variable 'messages' to express messages module. it needs connect flash module
     next();
 });
 
